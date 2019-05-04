@@ -1,0 +1,160 @@
+.header {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-large) {
+        overflow: hidden;
+        grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+    }
+
+    background-color: #f6f2f2;
+
+    &__container {
+        grid-column: center-start / center-end;
+        
+        display: grid;
+        // grid-template-columns: [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end];
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10rem;
+
+        margin-top: 3rem;
+        margin-bottom: 8rem;
+        
+        @media only screen and (max-width: $bp-large) {
+            margin-top: 0;
+            grid-gap: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1 / -1;
+            grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+            grid-gap: 0;
+        }
+    }
+
+    &__burger {
+        margin-right: 3rem;
+        display: none;
+        
+        @media only screen and (max-width: $bp-medium) {
+            display: block;
+        }
+    }
+
+    &__burger-element {
+        height: 2px;
+        width: 4rem;
+        background-color: #fff;
+
+        &::before,
+        &::after {
+            content: '';
+            height: 2px;
+            width: 4rem;
+            background-color: #fff;
+            position: absolute;
+        }
+
+        &::before {
+            margin-top: -1rem;
+        }
+
+        &::after {
+            margin-top: 1rem;
+        }
+    }
+
+    &__menu {
+        grid-column: 1 / -1;
+
+        background-color: $color-grey-dark-1;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            height: 7rem;
+            justify-content: flex-end;
+        }
+    }
+
+    &__item {
+        color: $color-grey-light-1;
+        padding: 3rem 2rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ff3f40;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
+    }
+
+    .active {
+        background-color: #ff3f40;
+    }
+
+    &__content {
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template-columns: min-content;
+        grid-template-rows: repeat(3, min-content);
+        grid-row-gap: 2.5rem;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1 / -1;
+            display: block;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: center-start / center-end;
+            margin: 2rem 0;
+        }
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        line-height: 1.7;
+        width: 90%;
+        opacity: 0.7;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 2rem 0;
+        }
+    }
+
+    &__video {
+        background-color: #c4c0b1;
+        box-shadow: 0 -.5rem 4rem .75rem rgba(199, 194, 194, 1);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1 / -1;
+            height: 35rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: center-start / center-end;
+        }
+    }
+
+    &__button {
+        margin-top: 1rem;
+        justify-self: start;
+    }
+}
