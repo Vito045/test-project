@@ -40,6 +40,7 @@
     color: $color-white;
     padding: 1.1rem 5rem;
     font-weight: 600;
+    cursor: pointer;
 
     &--red {
         background-color: $color-primary;
@@ -58,4 +59,5 @@ button.button {
     border-radius: 3px;
     border: none;
     padding: 0 4rem;
+    cursor: pointer;
 }
