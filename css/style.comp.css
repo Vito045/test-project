@@ -53,7 +53,8 @@ body {
   border-radius: 3px;
   color: #fff;
   padding: 1.1rem 5rem;
-  font-weight: 600; }
+  font-weight: 600;
+  cursor: pointer; }
   .button--red {
     background-color: #ff2d2d; }
   .button--white {
@@ -66,7 +67,8 @@ button.button {
   background-color: #ff2d2d;
   border-radius: 3px;
   border: none;
-  padding: 0 4rem; }
+  padding: 0 4rem;
+  cursor: pointer; }
 
 .team {
   grid-column: center-start / center-end; }
