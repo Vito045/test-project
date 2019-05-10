@@ -143,6 +143,10 @@
         align-items: center;
         justify-content: center;
 
+        img {
+            cursor: pointer;
+        }
+
         @media only screen and (max-width: $bp-large) {
             grid-column: 1 / -1;
             height: 35rem;

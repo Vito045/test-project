@@ -140,7 +140,8 @@ button.button {
     font-style: italic;
     font-size: 1.2rem;
     opacity: 0.8;
-    font-weight: 400; }
+    font-weight: 400;
+    cursor: pointer; }
   .team__members {
     grid-column: 3 / -1;
     display: grid;
@@ -265,6 +266,8 @@ button.button {
     display: flex;
     align-items: center;
     justify-content: center; }
+    .header__video img {
+      cursor: pointer; }
     @media only screen and (max-width: 62.5em) {
       .header__video {
         grid-column: 1 / -1;
@@ -522,3 +525,5 @@ button.button {
     justify-content: space-between;
     color: #b8b8b8;
     padding: 2rem 0; }
+  .footer__social img {
+    cursor: pointer; }
